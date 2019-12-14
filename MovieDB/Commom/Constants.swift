@@ -13,6 +13,10 @@ enum ServiceType {
     case QA
 }
 
+struct MovieDBLanguages {
+    static let Portuguese = "pt-BR"
+}
+
 struct CellIdentifiers {
     static let MainListCell = "movieCell"
 }

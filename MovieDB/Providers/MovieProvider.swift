@@ -32,7 +32,7 @@ class MovieDBMoviesProvider: BaseProvider, MovieProvider {
         ]
     }
 
-    func getMoviesForPage(page: Int, language: String = "pt-BR", completion: @escaping (Result<MovieDBResponse, Error>) -> Void) {
+    func getMoviesForPage(page: Int, language: String = MovieDBLanguages.Portuguese, completion: @escaping (Result<MovieDBResponse, Error>) -> Void) {
         var params = baseParams
 
         params!["language"] = "\(language)"
@@ -57,7 +57,7 @@ class MovieDBMoviesProvider: BaseProvider, MovieProvider {
         }
     }
 
-    func getMovieById(id: Int, language: String = "pt-BR", completion: @escaping (Result<MovieDetail, Error>) -> Void) {
+    func getMovieById(id: Int, language: String = MovieDBLanguages.Portuguese, completion: @escaping (Result<MovieDetail, Error>) -> Void) {
         var params = baseParams
 
         params!["language"] = "\(language)"

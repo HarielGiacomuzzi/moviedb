@@ -24,6 +24,7 @@
 		DB30B71D23A52ECB00321A78 /* MovieDBResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B71C23A52ECB00321A78 /* MovieDBResponse.swift */; };
 		DB30B71F23A5324100321A78 /* MovieProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B71E23A5324100321A78 /* MovieProvider.swift */; };
 		DB30B72123A535F100321A78 /* MovieDBMovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B72023A535F100321A78 /* MovieDBMovieDetail.swift */; };
+		DB30B72323A5A0B000321A78 /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B72223A5A0B000321A78 /* MoviesService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		DB30B71C23A52ECB00321A78 /* MovieDBResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieDBResponse.swift; path = MovieDB/MovieDBResponse.swift; sourceTree = SOURCE_ROOT; };
 		DB30B71E23A5324100321A78 /* MovieProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieProvider.swift; sourceTree = "<group>"; };
 		DB30B72023A535F100321A78 /* MovieDBMovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieDBMovieDetail.swift; path = MovieDB/MovieDBMovieDetail.swift; sourceTree = SOURCE_ROOT; };
+		DB30B72223A5A0B000321A78 /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		DB30B70923A5294000321A78 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DB30B72223A5A0B000321A78 /* MoviesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				DB30B71D23A52ECB00321A78 /* MovieDBResponse.swift in Sources */,
 				DB30B6E923A5286900321A78 /* ViewController.swift in Sources */,
 				DB30B72123A535F100321A78 /* MovieDBMovieDetail.swift in Sources */,
+				DB30B72323A5A0B000321A78 /* MoviesService.swift in Sources */,
 				DB30B71223A52A1000321A78 /* UIImageView+downloadImage.swift in Sources */,
 				DB30B6E523A5286900321A78 /* AppDelegate.swift in Sources */,
 				DB30B71623A52A6D00321A78 /* BaseProvider.swift in Sources */,
