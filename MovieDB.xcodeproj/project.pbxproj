@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DB30B6E523A5286900321A78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B6E423A5286900321A78 /* AppDelegate.swift */; };
 		DB30B6E723A5286900321A78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B6E623A5286900321A78 /* SceneDelegate.swift */; };
-		DB30B6E923A5286900321A78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B6E823A5286900321A78 /* ViewController.swift */; };
 		DB30B6EC23A5286900321A78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB30B6EA23A5286900321A78 /* Main.storyboard */; };
 		DB30B6EE23A5286B00321A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB30B6ED23A5286B00321A78 /* Assets.xcassets */; };
 		DB30B6F123A5286B00321A78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB30B6EF23A5286B00321A78 /* LaunchScreen.storyboard */; };
@@ -25,6 +24,12 @@
 		DB30B71F23A5324100321A78 /* MovieProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B71E23A5324100321A78 /* MovieProvider.swift */; };
 		DB30B72123A535F100321A78 /* MovieDBMovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B72023A535F100321A78 /* MovieDBMovieDetail.swift */; };
 		DB30B72323A5A0B000321A78 /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B72223A5A0B000321A78 /* MoviesService.swift */; };
+		DB30B72523A79A9E00321A78 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B72423A79A9E00321A78 /* MovieDetailViewModel.swift */; };
+		DB30B72723A79AB100321A78 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B72623A79AB100321A78 /* MovieDetailViewController.swift */; };
+		DB30B72923A79AC400321A78 /* MainListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B72823A79AC400321A78 /* MainListViewModel.swift */; };
+		DB30B72B23A79AD300321A78 /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B72A23A79AD300321A78 /* MainListViewController.swift */; };
+		DB30B73023A79D1300321A78 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B72E23A79D1300321A78 /* MovieTableViewCell.swift */; };
+		DB30B73323A7A2B400321A78 /* MovieCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B73223A7A2B400321A78 /* MovieCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +46,6 @@
 		DB30B6E123A5286900321A78 /* MovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB30B6E423A5286900321A78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB30B6E623A5286900321A78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DB30B6E823A5286900321A78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB30B6EB23A5286900321A78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB30B6ED23A5286B00321A78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB30B6F023A5286B00321A78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +64,12 @@
 		DB30B71E23A5324100321A78 /* MovieProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieProvider.swift; sourceTree = "<group>"; };
 		DB30B72023A535F100321A78 /* MovieDBMovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieDBMovieDetail.swift; path = MovieDB/MovieDBMovieDetail.swift; sourceTree = SOURCE_ROOT; };
 		DB30B72223A5A0B000321A78 /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
+		DB30B72423A79A9E00321A78 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		DB30B72623A79AB100321A78 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		DB30B72823A79AC400321A78 /* MainListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewModel.swift; sourceTree = "<group>"; };
+		DB30B72A23A79AD300321A78 /* MainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
+		DB30B72E23A79D1300321A78 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		DB30B73223A7A2B400321A78 /* MovieCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +116,10 @@
 				DB30B70B23A5295000321A78 /* Commom */,
 				DB30B70A23A5294800321A78 /* Providers */,
 				DB30B70923A5294000321A78 /* Services */,
+				DB30B72C23A79CCB00321A78 /* Components */,
 				DB30B70623A5292400321A78 /* Scenes */,
 				DB30B6E423A5286900321A78 /* AppDelegate.swift */,
 				DB30B6E623A5286900321A78 /* SceneDelegate.swift */,
-				DB30B6E823A5286900321A78 /* ViewController.swift */,
 				DB30B6EA23A5286900321A78 /* Main.storyboard */,
 				DB30B6ED23A5286B00321A78 /* Assets.xcassets */,
 				DB30B6EF23A5286B00321A78 /* LaunchScreen.storyboard */,
@@ -139,6 +149,8 @@
 		DB30B70723A5292D00321A78 /* MainList */ = {
 			isa = PBXGroup;
 			children = (
+				DB30B72823A79AC400321A78 /* MainListViewModel.swift */,
+				DB30B72A23A79AD300321A78 /* MainListViewController.swift */,
 			);
 			path = MainList;
 			sourceTree = "<group>";
@@ -146,6 +158,8 @@
 		DB30B70823A5293500321A78 /* MovieDetail */ = {
 			isa = PBXGroup;
 			children = (
+				DB30B72423A79A9E00321A78 /* MovieDetailViewModel.swift */,
+				DB30B72623A79AB100321A78 /* MovieDetailViewController.swift */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -194,6 +208,23 @@
 				DB30B72023A535F100321A78 /* MovieDBMovieDetail.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DB30B72C23A79CCB00321A78 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DB30B72D23A79CF200321A78 /* MainListCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DB30B72D23A79CF200321A78 /* MainListCell */ = {
+			isa = PBXGroup;
+			children = (
+				DB30B72E23A79D1300321A78 /* MovieTableViewCell.swift */,
+				DB30B73223A7A2B400321A78 /* MovieCellViewModel.swift */,
+			);
+			path = MainListCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,16 +330,21 @@
 			files = (
 				DB30B71A23A52B1E00321A78 /* ImageProvider.swift in Sources */,
 				DB30B71D23A52ECB00321A78 /* MovieDBResponse.swift in Sources */,
-				DB30B6E923A5286900321A78 /* ViewController.swift in Sources */,
+				DB30B73023A79D1300321A78 /* MovieTableViewCell.swift in Sources */,
 				DB30B72123A535F100321A78 /* MovieDBMovieDetail.swift in Sources */,
 				DB30B72323A5A0B000321A78 /* MoviesService.swift in Sources */,
 				DB30B71223A52A1000321A78 /* UIImageView+downloadImage.swift in Sources */,
 				DB30B6E523A5286900321A78 /* AppDelegate.swift in Sources */,
 				DB30B71623A52A6D00321A78 /* BaseProvider.swift in Sources */,
 				DB30B6E723A5286900321A78 /* SceneDelegate.swift in Sources */,
+				DB30B73323A7A2B400321A78 /* MovieCellViewModel.swift in Sources */,
+				DB30B72B23A79AD300321A78 /* MainListViewController.swift in Sources */,
 				DB30B71823A52AB000321A78 /* URLRequest+HTTPMethods.swift in Sources */,
 				DB30B70F23A529CA00321A78 /* CI.swift in Sources */,
+				DB30B72523A79A9E00321A78 /* MovieDetailViewModel.swift in Sources */,
+				DB30B72723A79AB100321A78 /* MovieDetailViewController.swift in Sources */,
 				DB30B71F23A5324100321A78 /* MovieProvider.swift in Sources */,
+				DB30B72923A79AC400321A78 /* MainListViewModel.swift in Sources */,
 				DB30B71423A52A3500321A78 /* ImageCache.swift in Sources */,
 				DB30B70D23A5299800321A78 /* Constants.swift in Sources */,
 			);

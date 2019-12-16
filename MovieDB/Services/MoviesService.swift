@@ -16,6 +16,7 @@ protocol MoviesService: class {
 enum MovieServiceErrors: Error {
     case InvalidCurrentPageNumber
     case InvalidMovieId
+    case Unknown(error: Error)
 }
 
 class MainMovieService: MoviesService {
@@ -29,14 +30,14 @@ class MainMovieService: MoviesService {
     }
 
     func fetchNextPage(completion: @escaping (Result<[Movie], Error>) -> Void) {
-        if currentPage < numberOfPages {
+        if currentPage <= numberOfPages {
             provider.getMoviesForPage(
                 page: currentPage,
                 language: MovieDBLanguages.Portuguese) { result in
                     switch result {
                     case .failure(let error):
                         debugPrint("Could not fetch results from movieDB, details: \(error.localizedDescription)")
-                        completion(.failure(error))
+                        completion(.failure(MovieServiceErrors.Unknown(error: error)))
                     case .success(let movieDBResponse):
                         self.currentPage += 1
                         self.numberOfPages = movieDBResponse.totalPages
@@ -57,7 +58,7 @@ class MainMovieService: MoviesService {
                     switch result {
                     case .failure(let error):
                         debugPrint("Could not fetch details of movie: \(error.localizedDescription)")
-                        completion(.failure(error))
+                        completion(.failure(MovieServiceErrors.Unknown(error: error)))
                     case .success(let movieDetails):
                         completion(.success(movieDetails))
                     }
