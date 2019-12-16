@@ -37,7 +37,7 @@ class Movie: Codable {
     let voteCount: Int
     let voteAverage: Double
     let title, releaseDate: String
-    let originalLanguage: OriginalLanguage
+    let originalLanguage: String
     let originalTitle: String
     let genreIDS: [Int]
     let backdropPath: String
@@ -58,7 +58,7 @@ class Movie: Codable {
         case posterPath = "poster_path"
     }
 
-    init(popularity: Double, id: Int, video: Bool, voteCount: Int, voteAverage: Double, title: String, releaseDate: String, originalLanguage: OriginalLanguage, originalTitle: String, genreIDS: [Int], backdropPath: String, adult: Bool, overview: String, posterPath: String) {
+    init(popularity: Double, id: Int, video: Bool, voteCount: Int, voteAverage: Double, title: String, releaseDate: String, originalLanguage: String, originalTitle: String, genreIDS: [Int], backdropPath: String, adult: Bool, overview: String, posterPath: String) {
         self.popularity = popularity
         self.id = id
         self.video = video
@@ -74,10 +74,4 @@ class Movie: Codable {
         self.overview = overview
         self.posterPath = posterPath
     }
-}
-
-enum OriginalLanguage: String, Codable {
-    case cn = "cn"
-    case en = "en"
-    case ja = "ja"
 }

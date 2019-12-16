@@ -41,7 +41,7 @@ class MainMovieService: MoviesService {
                     case .success(let movieDBResponse):
                         self.currentPage += 1
                         self.numberOfPages = movieDBResponse.totalPages
-                        self.currentMovies.append(contentsOf: movieDBResponse.results)
+                        self.currentMovies = movieDBResponse.results
                         completion(.success(self.currentMovies))
                     }
             }

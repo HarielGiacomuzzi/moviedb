@@ -24,6 +24,10 @@ class MainListViewController: UIViewController {
 
         viewModel = MainListViewModel()
         viewModel.delegate = self
+
+        self.title = "Top Movies"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 0.1329937279, green: 0.2865786169, blue: 0.252356217, alpha: 1)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -33,8 +37,14 @@ class MainListViewController: UIViewController {
     }
 
     func showErrorMessage(message: String) {
-        let message = UIAlertController(title: "Oops, something has gone wrong", message: message, preferredStyle: .alert)
-        present(message, animated: true, completion: nil)
+        let alertController = UIAlertController(title: "Oops, something has gone wrong", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default) { _ in
+            alertController.dismiss(animated: true, completion: nil)
+        }
+        alertController.addAction(action)
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
 
 }
@@ -73,9 +83,22 @@ extension MainListViewController: UITableViewDataSource {
 }
 
 extension MainListViewController: UITableViewDelegate {
-
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 230.0
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: SegueIdentifiers.GotoDetail, sender: viewModel.movies[indexPath.row])
+    }
+
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let actualSize = scrollView.contentSize.height
+        let actualScrollPosition = scrollView.contentOffset.y
+
+        if actualScrollPosition > actualSize * 0.8 {
+            DispatchQueue.global(qos: .background).async {
+                self.viewModel.fetchMovies()
+            }
+        }
+    }
 }

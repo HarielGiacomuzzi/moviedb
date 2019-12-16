@@ -21,6 +21,10 @@ struct CellIdentifiers {
     static let MainListCell = "movieCell"
 }
 
+struct SegueIdentifiers {
+    static let GotoDetail = "showDetail"
+}
+
 struct KeyNames {
     static let MovieDBApiKey = "MOVIE_DB_API_KEY"
     static let MovieDBBasePath = "MOVIE_DB_BASE_PATH"
