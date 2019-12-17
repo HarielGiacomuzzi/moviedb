@@ -25,28 +25,21 @@ class MainListViewController: UIViewController {
         viewModel = MainListViewModel()
         viewModel.delegate = self
 
+        viewModel.fetchMovies()
+
         self.title = "Top Movies"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 0.1329937279, green: 0.2865786169, blue: 0.252356217, alpha: 1)
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        viewModel.fetchMovies()
-    }
-
-    func showErrorMessage(message: String) {
-        let alertController = UIAlertController(title: "Oops, something has gone wrong", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default) { _ in
-            alertController.dismiss(animated: true, completion: nil)
-        }
-        alertController.addAction(action)
-        DispatchQueue.main.async {
-            self.present(alertController, animated: true, completion: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationView = segue.destination as? MovieDetailViewController,
+           let movie = sender as? Movie {
+            let destViewModel = MovieDetailViewModel()
+            destViewModel.movieId = movie.id
+            destinationView.viewModel = destViewModel
         }
     }
-
 }
 
 extension MainListViewController: MainListViewModelDelegate {

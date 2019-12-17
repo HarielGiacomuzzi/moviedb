@@ -30,6 +30,7 @@
 		DB30B72B23A79AD300321A78 /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B72A23A79AD300321A78 /* MainListViewController.swift */; };
 		DB30B73023A79D1300321A78 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B72E23A79D1300321A78 /* MovieTableViewCell.swift */; };
 		DB30B73323A7A2B400321A78 /* MovieCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B73223A7A2B400321A78 /* MovieCellViewModel.swift */; };
+		DB30B73523A92EB200321A78 /* UIViewController+ShowMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30B73423A92EB200321A78 /* UIViewController+ShowMessages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		DB30B72A23A79AD300321A78 /* MainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
 		DB30B72E23A79D1300321A78 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		DB30B73223A7A2B400321A78 /* MovieCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellViewModel.swift; sourceTree = "<group>"; };
+		DB30B73423A92EB200321A78 /* UIViewController+ShowMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShowMessages.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			children = (
 				DB30B71123A52A1000321A78 /* UIImageView+downloadImage.swift */,
 				DB30B71723A52AB000321A78 /* URLRequest+HTTPMethods.swift */,
+				DB30B73423A92EB200321A78 /* UIViewController+ShowMessages.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				DB30B72323A5A0B000321A78 /* MoviesService.swift in Sources */,
 				DB30B71223A52A1000321A78 /* UIImageView+downloadImage.swift in Sources */,
 				DB30B6E523A5286900321A78 /* AppDelegate.swift in Sources */,
+				DB30B73523A92EB200321A78 /* UIViewController+ShowMessages.swift in Sources */,
 				DB30B71623A52A6D00321A78 /* BaseProvider.swift in Sources */,
 				DB30B6E723A5286900321A78 /* SceneDelegate.swift in Sources */,
 				DB30B73323A7A2B400321A78 /* MovieCellViewModel.swift in Sources */,

@@ -40,7 +40,7 @@ class Movie: Codable {
     let originalLanguage: String
     let originalTitle: String
     let genreIDS: [Int]
-    let backdropPath: String
+    let backdropPath: String?
     let adult: Bool
     let overview, posterPath: String
 
