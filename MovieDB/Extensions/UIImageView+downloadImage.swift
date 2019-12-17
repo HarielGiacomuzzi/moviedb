@@ -21,3 +21,13 @@ extension UIImageView {
         }
     }
 }
+
+extension UIImageView {
+    func addRoundedBorder(radious: CGFloat, color: CGColor, borderWidth: CGFloat = 1.0) {
+        self.layer.cornerRadius = radious
+        self.layer.borderColor = color
+        self.layer.borderWidth = borderWidth
+        self.layer.masksToBounds = true
+    }
+
+}

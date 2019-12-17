@@ -58,16 +58,9 @@ class MovieTableViewCell: UITableViewCell {
     }
 
     private func setupViews() {
-        movieImage.layer.cornerRadius = 12.0
-        movieImage.layer.borderColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
-        movieImage.layer.borderWidth = 1.0
-        movieImage.layer.masksToBounds = true
-
-        scoreView.layer.cornerRadius = 8.0
-        scoreView.layer.masksToBounds = true
-
-        containerView.layer.cornerRadius = 20.0
-        containerView.layer.masksToBounds = true
+        movieImage.addRoundedBorder(radious: 12.0, color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1))
+        scoreView.makeRoundedCorners(radious: 8.0)
+        containerView.makeRoundedCorners(radious: 20.0)
     }
     
 }

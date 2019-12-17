@@ -19,6 +19,8 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet var sinopsisTextView: UITextView!
     @IBOutlet var actorsScrollView: UIScrollView!
     @IBOutlet var actorsStackView: UIStackView!
+    @IBOutlet var imagesScrollView: UIScrollView!
+    @IBOutlet var imagesStackView: UIStackView!
     
 
     var viewModel: MovieDetailViewModel?
@@ -30,6 +32,12 @@ class MovieDetailViewController: UIViewController {
         viewModel?.fetchMovieDetail()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        coverImageView.addRoundedBorder(radious: 12.0, color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1))
+        rateContainerView.makeRoundedCorners(radious: 8.0)
+    }
 }
 
 extension MovieDetailViewController: MovieDetailViewModelDelegate {
