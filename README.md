@@ -5,8 +5,8 @@ to fetch movies images and details.
 
 Some Screenshoots.
 
-![alt Home View](https://github.com/HarielGiacomuzzi/moviedb/screenshots/image1.png "Main View")
-![alt Detail View](https://github.com/HarielGiacomuzzi/moviedb/screenshots/image1.png "Detail View")
+![alt Home View](https://github.com/HarielGiacomuzzi/moviedb/blob/master/screenshots/image1.png "Main View")
+![alt Detail View](https://github.com/HarielGiacomuzzi/moviedb/blob/master/screenshots/image2.png "Detail View")
 
 
 This project only needs Xcode, iOS 13.0 and cocoapods ( wich you may find intel about [here](https://cocoapods.org/about) )
