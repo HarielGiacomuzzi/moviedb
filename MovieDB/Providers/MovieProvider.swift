@@ -11,6 +11,7 @@ import Foundation
 protocol MovieProvider: class {
     func getMoviesForPage(page: Int, language: String, completion: @escaping (Result<MovieDBResponse, Error>) -> Void)
     func getMovieById(id: Int, language: String, completion: @escaping (Result<MovieDetail, Error>) -> Void)
+    func getImagesForMovieId(id: Int, completion: @escaping (Result<[Backdrop], Error>) -> Void)
 }
 
 class MovieDBMoviesProvider: BaseProvider, MovieProvider {
@@ -49,6 +50,27 @@ class MovieDBMoviesProvider: BaseProvider, MovieProvider {
                     do {
                         let response = try JSONDecoder().decode(MovieDBResponse.self, from: data)
                         completion(.success(response))
+                    } catch let error {
+                        debugPrint("There's an error while decoding movieDB response: \(error.localizedDescription)")
+                        completion(.failure(error))
+                    }
+                }
+        }
+    }
+
+    func getImagesForMovieId(id: Int, completion: @escaping (Result<[Backdrop], Error>) -> Void) {
+        let params = baseParams
+
+        callAPI(
+            queryString: params,
+            urlPath: "\(basePath ?? "")/movie/\(id)/images") { res in
+                switch res {
+                case .failure(let error):
+                    debugPrint("There's an error getting movie images: \(error.localizedDescription)")
+                case .success(let data):
+                    do {
+                        let response = try JSONDecoder().decode(MovieImage.self, from: data)
+                        completion(.success(response.backdrops ?? []))
                     } catch let error {
                         debugPrint("There's an error while decoding movieDB response: \(error.localizedDescription)")
                         completion(.failure(error))

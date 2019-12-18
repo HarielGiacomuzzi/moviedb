@@ -29,5 +29,4 @@ extension UIImageView {
         self.layer.borderWidth = borderWidth
         self.layer.masksToBounds = true
     }
-
 }

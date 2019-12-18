@@ -29,7 +29,8 @@ class MainListViewController: UIViewController {
 
         self.title = "Top Movies"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 0.1329937279, green: 0.2865786169, blue: 0.252356217, alpha: 1)
+
+        view.setGradientBackground(topColor: #colorLiteral(red: 0.3262622058, green: 0.427818954, blue: 0.428390801, alpha: 1), bottomColor: #colorLiteral(red: 0.01249628421, green: 0.1611334383, blue: 0.1617439985, alpha: 1))
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

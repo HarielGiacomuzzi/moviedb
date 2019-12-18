@@ -55,12 +55,15 @@ class MovieTableViewCell: UITableViewCell {
         default:
             scoreView.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
         }
+
+        self.selectionStyle = .none
     }
 
     private func setupViews() {
         movieImage.addRoundedBorder(radious: 12.0, color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1))
         scoreView.makeRoundedCorners(radious: 8.0)
         containerView.makeRoundedCorners(radious: 20.0)
+        self.backgroundColor = .clear
     }
     
 }

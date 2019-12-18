@@ -10,12 +10,19 @@ import Foundation
 
 protocol MovieDetailViewModelDelegate {
     func didFetchMovieDetails(error: MovieServiceErrors?)
+    func didFetchMovieImagePaths(error: MovieServiceErrors?)
 }
 
 class MovieDetailViewModel {
     var movieInfo: MovieDetail? {
         didSet {
             delegate?.didFetchMovieDetails(error: nil)
+        }
+    }
+
+    var movieImages: [Backdrop]? {
+        didSet {
+            delegate?.didFetchMovieImagePaths(error: nil)
         }
     }
 
@@ -37,6 +44,15 @@ class MovieDetailViewModel {
                 self.movieInfo = movie
             case .failure(let error):
                 self.delegate?.didFetchMovieDetails(error: error as? MovieServiceErrors)
+            }
+        }
+
+        service.fetchImageAddressesForMovie(movieId: id) { resp in
+            switch resp {
+            case .success(let images):
+                self.movieImages = images
+            case .failure(let error):
+                self.delegate?.didFetchMovieImagePaths(error: error as? MovieServiceErrors)
             }
         }
     }

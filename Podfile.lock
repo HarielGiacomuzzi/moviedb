@@ -1,0 +1,27 @@
+PODS:
+  - ImageSlideshow (1.8.1):
+    - ImageSlideshow/Core (= 1.8.1)
+  - ImageSlideshow/Core (1.8.1)
+  - ImageSlideshow/Kingfisher (1.8.1):
+    - ImageSlideshow/Core
+    - Kingfisher (> 3.0)
+  - Kingfisher (5.12.0):
+    - Kingfisher/Core (= 5.12.0)
+  - Kingfisher/Core (5.12.0)
+
+DEPENDENCIES:
+  - ImageSlideshow (~> 1.8.1)
+  - ImageSlideshow/Kingfisher
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ImageSlideshow
+    - Kingfisher
+
+SPEC CHECKSUMS:
+  ImageSlideshow: 634865d7d4e96f21e3830a31b51bde768cc94cea
+  Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
+
+PODFILE CHECKSUM: 7a0d2ab669c5b42510caaef0b135ef82039b8b25
+
+COCOAPODS: 1.7.4

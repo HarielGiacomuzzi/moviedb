@@ -11,6 +11,7 @@ import Foundation
 protocol MoviesService: class {
     func fetchNextPage(completion: @escaping (Result<[Movie], Error>) -> Void)
     func fetchMovieDetail(movieId: Int, completion: @escaping (Result<MovieDetail, Error>) -> Void)
+    func fetchImageAddressesForMovie(movieId: Int, completion: @escaping (Result<[Backdrop], Error>) -> Void)
 }
 
 enum MovieServiceErrors: Error {
@@ -47,6 +48,22 @@ class MainMovieService: MoviesService {
             }
         } else {
             completion(.failure(MovieServiceErrors.InvalidCurrentPageNumber))
+        }
+    }
+
+    func fetchImageAddressesForMovie(movieId: Int, completion: @escaping (Result<[Backdrop], Error>) -> Void) {
+        if movieId > 0 {
+            provider.getImagesForMovieId(id: movieId) { result in
+                    switch result {
+                    case .failure(let error):
+                        debugPrint("Could not fetch images of movie: \(error.localizedDescription)")
+                        completion(.failure(MovieServiceErrors.Unknown(error: error)))
+                    case .success(let movieImages):
+                        completion(.success(movieImages))
+                    }
+            }
+        } else {
+            completion(.failure(MovieServiceErrors.InvalidMovieId))
         }
     }
 
